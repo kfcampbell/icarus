@@ -23,9 +23,8 @@ namespace Icarus
         public double PeakAltitude { get; set; }
         public double BaselineVerticalAccuracy { get; set; }
         public double PeakVerticalAccuracy { get; set; }
-        public string DateTime { get; set; }
+        public DateTime TimeStamp { get; set; }
         public string PhoneModel { get; set; }
         public double ThrowDuration { get; set; }
-        public DateTime TimeStamp { get; set; }
     }
 }

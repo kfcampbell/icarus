@@ -11,9 +11,10 @@ using System;
 namespace server.Migrations
 {
     [DbContext(typeof(ScoreContext))]
-    partial class ScoreContextModelSnapshot : ModelSnapshot
+    [Migration("20190217204531_DropDatetime")]
+    partial class DropDatetime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
