@@ -10,13 +10,13 @@ import UIKit
 import CoreLocation
 
 // todo(kfcampbell):
-// -1. track baseline altitude (not total altitude)
 // 0. figure out how to make service calls bound to models
 // 1. create UI/models for leaderboard. populate with fake data in view model.
 // 2. populate leaderboard with real data
 // 3. wire up "send high score" button press
 
 class FlyViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var displayNameLabel: UITextField!
     @IBOutlet weak var currentAltitudeLabel: UILabel!
     @IBOutlet weak var currentVerticalAccuracyLabel: UILabel!
     @IBOutlet weak var highestAltitudeLabel: UILabel!
@@ -33,12 +33,15 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager.distanceFilter = kCLDistanceFilterNone
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         flyViewModel.updateState(location: locations[locations.count - 1])
         updateUI()
     }
+    
     @IBAction func trackingSwitchFlipped(_ sender: UISwitch) {
         if(sender.isOn) {
             locationManager.startUpdatingLocation()
@@ -46,7 +49,10 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.stopUpdatingLocation()
         }
     }
+    
     @IBAction func sendHighScore(_ sender: UIButton) {
+        flyViewModel.displayName = (displayNameLabel.text == "") ? "default_display_name" : displayNameLabel.text ?? "default_display_name"
+        let score = flyViewModel.getHighScore()
         let alert = UIAlertController(title: "You've Made A Legal Agreement!", message: "Thanks for granting us consent to take your first born child. We'll be in touch with more details shortly!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default) { (action) in
             // noop

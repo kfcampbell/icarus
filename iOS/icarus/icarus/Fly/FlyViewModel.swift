@@ -10,10 +10,29 @@ import Foundation
 import CoreLocation
 
 class FlyViewModel {
+    public var displayName = "default_display_name"
     private var locations: [CLLocation] = []
     private var baselineLocation: CLLocation = CLLocation()
     private var highestAltitude: CLLocationDistance? = nil
     private var highestVerticalAccuracy: CLLocationAccuracy? = nil
+    
+    public func getHighScore() -> Score {
+        let score = Score()
+        score.baselineAltitude = baselineLocation.altitude.description
+        score.baselineVerticalAccuracy = baselineLocation.altitude.description
+        score.dateTime = ScoreUtilities.getFormattedDate()
+        score.displayName = displayName
+        score.latLon = ScoreUtilities.getFormattedLatLon(location: baselineLocation)
+        
+        if let peakAltitude = highestAltitude {
+            score.peakAltitude = String(peakAltitude)
+        }
+        if let peakVerticalAccuracy = highestVerticalAccuracy {
+            score.peakVerticalAccuracy = String(peakVerticalAccuracy)
+        }
+        score.phoneModel = ScoreUtilities.getDeviceModel()
+        return score
+    }
     
     public func getCurrentAltitude() -> CLLocationDistance? {
         if(locations.count > 0) {

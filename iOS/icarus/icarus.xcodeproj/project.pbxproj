@@ -15,6 +15,9 @@
 		760037992219BB8600991ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760037972219BB8600991ED7 /* LaunchScreen.storyboard */; };
 		760037A42219BB8600991ED7 /* icarusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037A32219BB8600991ED7 /* icarusTests.swift */; };
 		760037B02219C14200991ED7 /* FlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037AF2219C14200991ED7 /* FlyViewModel.swift */; };
+		760037B32219E3CA00991ED7 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B22219E3CA00991ED7 /* Score.swift */; };
+		760037B62219E4B300991ED7 /* ScoreUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B52219E4B300991ED7 /* ScoreUtilities.swift */; };
+		760037B82219E5F200991ED7 /* DeviceUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B72219E5F200991ED7 /* DeviceUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		760037A32219BB8600991ED7 /* icarusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icarusTests.swift; sourceTree = "<group>"; };
 		760037A52219BB8600991ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760037AF2219C14200991ED7 /* FlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyViewModel.swift; sourceTree = "<group>"; };
+		760037B22219E3CA00991ED7 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		760037B52219E4B300991ED7 /* ScoreUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreUtilities.swift; sourceTree = "<group>"; };
+		760037B72219E5F200991ED7 /* DeviceUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		7600378A2219BB8600991ED7 /* icarus */ = {
 			isa = PBXGroup;
 			children = (
+				760037B42219E4A200991ED7 /* Utilities */,
+				760037B12219E3B000991ED7 /* Models */,
 				760037AE2219C0AF00991ED7 /* Fly */,
 				7600378B2219BB8600991ED7 /* AppDelegate.swift */,
 				7600378F2219BB8600991ED7 /* Main.storyboard */,
@@ -108,6 +116,23 @@
 				760037AF2219C14200991ED7 /* FlyViewModel.swift */,
 			);
 			path = Fly;
+			sourceTree = "<group>";
+		};
+		760037B12219E3B000991ED7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				760037B22219E3CA00991ED7 /* Score.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		760037B42219E4A200991ED7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				760037B52219E4B300991ED7 /* ScoreUtilities.swift */,
+				760037B72219E5F200991ED7 /* DeviceUtilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +237,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				760037B02219C14200991ED7 /* FlyViewModel.swift in Sources */,
+				760037B62219E4B300991ED7 /* ScoreUtilities.swift in Sources */,
+				760037B82219E5F200991ED7 /* DeviceUtilities.swift in Sources */,
 				7600378E2219BB8600991ED7 /* FlyViewController.swift in Sources */,
 				760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */,
 				7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */,
+				760037B32219E3CA00991ED7 /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
