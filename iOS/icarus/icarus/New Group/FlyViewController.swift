@@ -36,6 +36,21 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
         flyViewModel.updateState(location: locations[locations.count - 1])
         updateUI()
     }
+    @IBAction func trackingSwitchFlipped(_ sender: UISwitch) {
+        if(sender.isOn) {
+            locationManager.startUpdatingLocation()
+        } else {
+            locationManager.stopUpdatingLocation()
+        }
+    }
+    @IBAction func sendHighScore(_ sender: UIButton) {
+        let alert = UIAlertController(title: "You've Made A Legal Agreement!", message: "Thanks for granting us consent to take your first born child. We'll be in touch with more details shortly!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okay", style: .default) { (action) in
+            // noop
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     private func updateUI() {
         currentAltitudeLabel.text = "altitude: \(flyViewModel.getCurrentAltitude() ?? 0.0) meters"
