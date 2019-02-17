@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600378B2219BB8600991ED7 /* AppDelegate.swift */; };
+		7600378E2219BB8600991ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600378D2219BB8600991ED7 /* ViewController.swift */; };
+		760037912219BB8600991ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7600378F2219BB8600991ED7 /* Main.storyboard */; };
+		760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760037922219BB8600991ED7 /* icarus.xcdatamodeld */; };
+		760037962219BB8600991ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760037952219BB8600991ED7 /* Assets.xcassets */; };
+		760037992219BB8600991ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760037972219BB8600991ED7 /* LaunchScreen.storyboard */; };
+		760037A42219BB8600991ED7 /* icarusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037A32219BB8600991ED7 /* icarusTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		760037A02219BB8600991ED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 760037802219BB8600991ED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 760037872219BB8600991ED7;
+			remoteInfo = icarus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		760037882219BB8600991ED7 /* icarus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icarus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7600378B2219BB8600991ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7600378D2219BB8600991ED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		760037902219BB8600991ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		760037932219BB8600991ED7 /* icarus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icarus.xcdatamodel; sourceTree = "<group>"; };
+		760037952219BB8600991ED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		760037982219BB8600991ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7600379A2219BB8600991ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7600379F2219BB8600991ED7 /* icarusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icarusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		760037A32219BB8600991ED7 /* icarusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icarusTests.swift; sourceTree = "<group>"; };
+		760037A52219BB8600991ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		760037852219BB8600991ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7600379C2219BB8600991ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7600377F2219BB8600991ED7 = {
+			isa = PBXGroup;
+			children = (
+				7600378A2219BB8600991ED7 /* icarus */,
+				760037A22219BB8600991ED7 /* icarusTests */,
+				760037892219BB8600991ED7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		760037892219BB8600991ED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				760037882219BB8600991ED7 /* icarus.app */,
+				7600379F2219BB8600991ED7 /* icarusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7600378A2219BB8600991ED7 /* icarus */ = {
+			isa = PBXGroup;
+			children = (
+				7600378B2219BB8600991ED7 /* AppDelegate.swift */,
+				7600378D2219BB8600991ED7 /* ViewController.swift */,
+				7600378F2219BB8600991ED7 /* Main.storyboard */,
+				760037952219BB8600991ED7 /* Assets.xcassets */,
+				760037972219BB8600991ED7 /* LaunchScreen.storyboard */,
+				7600379A2219BB8600991ED7 /* Info.plist */,
+				760037922219BB8600991ED7 /* icarus.xcdatamodeld */,
+			);
+			path = icarus;
+			sourceTree = "<group>";
+		};
+		760037A22219BB8600991ED7 /* icarusTests */ = {
+			isa = PBXGroup;
+			children = (
+				760037A32219BB8600991ED7 /* icarusTests.swift */,
+				760037A52219BB8600991ED7 /* Info.plist */,
+			);
+			path = icarusTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		760037872219BB8600991ED7 /* icarus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 760037A82219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarus" */;
+			buildPhases = (
+				760037842219BB8600991ED7 /* Sources */,
+				760037852219BB8600991ED7 /* Frameworks */,
+				760037862219BB8600991ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = icarus;
+			productName = icarus;
+			productReference = 760037882219BB8600991ED7 /* icarus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7600379E2219BB8600991ED7 /* icarusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 760037AB2219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarusTests" */;
+			buildPhases = (
+				7600379B2219BB8600991ED7 /* Sources */,
+				7600379C2219BB8600991ED7 /* Frameworks */,
+				7600379D2219BB8600991ED7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				760037A12219BB8600991ED7 /* PBXTargetDependency */,
+			);
+			name = icarusTests;
+			productName = icarusTests;
+			productReference = 7600379F2219BB8600991ED7 /* icarusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		760037802219BB8600991ED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = kfcampbell;
+				TargetAttributes = {
+					760037872219BB8600991ED7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7600379E2219BB8600991ED7 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 760037872219BB8600991ED7;
+					};
+				};
+			};
+			buildConfigurationList = 760037832219BB8600991ED7 /* Build configuration list for PBXProject "icarus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7600377F2219BB8600991ED7;
+			productRefGroup = 760037892219BB8600991ED7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				760037872219BB8600991ED7 /* icarus */,
+				7600379E2219BB8600991ED7 /* icarusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		760037862219BB8600991ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760037992219BB8600991ED7 /* LaunchScreen.storyboard in Resources */,
+				760037962219BB8600991ED7 /* Assets.xcassets in Resources */,
+				760037912219BB8600991ED7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7600379D2219BB8600991ED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		760037842219BB8600991ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7600378E2219BB8600991ED7 /* ViewController.swift in Sources */,
+				760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */,
+				7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7600379B2219BB8600991ED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760037A42219BB8600991ED7 /* icarusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		760037A12219BB8600991ED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 760037872219BB8600991ED7 /* icarus */;
+			targetProxy = 760037A02219BB8600991ED7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7600378F2219BB8600991ED7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				760037902219BB8600991ED7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		760037972219BB8600991ED7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				760037982219BB8600991ED7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		760037A62219BB8600991ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		760037A72219BB8600991ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		760037A92219BB8600991ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27G44NF7K6;
+				INFOPLIST_FILE = icarus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kfcampbell.icarus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		760037AA2219BB8600991ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27G44NF7K6;
+				INFOPLIST_FILE = icarus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kfcampbell.icarus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		760037AC2219BB8600991ED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27G44NF7K6;
+				INFOPLIST_FILE = icarusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kfcampbell.icarusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/icarus.app/icarus";
+			};
+			name = Debug;
+		};
+		760037AD2219BB8600991ED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27G44NF7K6;
+				INFOPLIST_FILE = icarusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kfcampbell.icarusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/icarus.app/icarus";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		760037832219BB8600991ED7 /* Build configuration list for PBXProject "icarus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760037A62219BB8600991ED7 /* Debug */,
+				760037A72219BB8600991ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		760037A82219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760037A92219BB8600991ED7 /* Debug */,
+				760037AA2219BB8600991ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		760037AB2219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760037AC2219BB8600991ED7 /* Debug */,
+				760037AD2219BB8600991ED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		760037922219BB8600991ED7 /* icarus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				760037932219BB8600991ED7 /* icarus.xcdatamodel */,
+			);
+			currentVersion = 760037932219BB8600991ED7 /* icarus.xcdatamodel */;
+			path = icarus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 760037802219BB8600991ED7 /* Project object */;
+}
