@@ -17,7 +17,7 @@ class FlyViewModel {
     
     public func getCurrentAltitude() -> CLLocationDistance? {
         if(locations.count > 0) {
-            return locations[locations.count - 1].altitude
+            return locations[locations.count - 1].altitude - baselineLocation.altitude
         }
         return nil
     }
@@ -30,14 +30,14 @@ class FlyViewModel {
     }
     
     public func getHighestAltitude() -> CLLocationDistance? {
-        if(highestAltitude != nil) {
-            return highestAltitude
+        if let highest = highestAltitude {
+            return highest - baselineLocation.altitude
         }
         return nil
     }
     public func getHighestVerticalAccuracy() -> CLLocationAccuracy? {
-        if(highestVerticalAccuracy != nil) {
-            return highestVerticalAccuracy
+        if let highest = highestVerticalAccuracy {
+            return highest
         }
         return nil
     }

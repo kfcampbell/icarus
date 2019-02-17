@@ -56,9 +56,9 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func updateUI() {
-        currentAltitudeLabel.text = "altitude: \(flyViewModel.getCurrentAltitude() ?? 0.0) meters"
+        currentAltitudeLabel.text = "current height: \(flyViewModel.getCurrentAltitude() ?? 0.0) meters"
         currentVerticalAccuracyLabel.text = "vertical accuracy: \(flyViewModel.getCurrentVerticalAccuracy() ?? 0.0) meters"
-        highestAltitudeLabel.text = "highest altitude: \(flyViewModel.getHighestAltitude() ?? 0.0) meters"
+        highestAltitudeLabel.text = "highest toss: \(flyViewModel.getHighestAltitude() ?? 0.0) meters"
         highestVerticalAccuracyLabel.text = "highest vertical accuracy: \(flyViewModel.getHighestVerticalAccuracy() ?? 0.0)"
     }
 }
