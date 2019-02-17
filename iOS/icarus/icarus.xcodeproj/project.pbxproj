@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600378B2219BB8600991ED7 /* AppDelegate.swift */; };
-		7600378E2219BB8600991ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600378D2219BB8600991ED7 /* ViewController.swift */; };
+		7600378E2219BB8600991ED7 /* FlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600378D2219BB8600991ED7 /* FlyViewController.swift */; };
 		760037912219BB8600991ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7600378F2219BB8600991ED7 /* Main.storyboard */; };
 		760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760037922219BB8600991ED7 /* icarus.xcdatamodeld */; };
 		760037962219BB8600991ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 760037952219BB8600991ED7 /* Assets.xcassets */; };
 		760037992219BB8600991ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 760037972219BB8600991ED7 /* LaunchScreen.storyboard */; };
 		760037A42219BB8600991ED7 /* icarusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037A32219BB8600991ED7 /* icarusTests.swift */; };
+		760037B02219C14200991ED7 /* FlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037AF2219C14200991ED7 /* FlyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 /* Begin PBXFileReference section */
 		760037882219BB8600991ED7 /* icarus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icarus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7600378B2219BB8600991ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7600378D2219BB8600991ED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7600378D2219BB8600991ED7 /* FlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyViewController.swift; sourceTree = "<group>"; };
 		760037902219BB8600991ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		760037932219BB8600991ED7 /* icarus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = icarus.xcdatamodel; sourceTree = "<group>"; };
 		760037952219BB8600991ED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		7600379F2219BB8600991ED7 /* icarusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icarusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		760037A32219BB8600991ED7 /* icarusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icarusTests.swift; sourceTree = "<group>"; };
 		760037A52219BB8600991ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		760037AF2219C14200991ED7 /* FlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,8 @@
 		7600378A2219BB8600991ED7 /* icarus */ = {
 			isa = PBXGroup;
 			children = (
+				760037AE2219C0AF00991ED7 /* Fly */,
 				7600378B2219BB8600991ED7 /* AppDelegate.swift */,
-				7600378D2219BB8600991ED7 /* ViewController.swift */,
 				7600378F2219BB8600991ED7 /* Main.storyboard */,
 				760037952219BB8600991ED7 /* Assets.xcassets */,
 				760037972219BB8600991ED7 /* LaunchScreen.storyboard */,
@@ -97,6 +99,16 @@
 				760037A52219BB8600991ED7 /* Info.plist */,
 			);
 			path = icarusTests;
+			sourceTree = "<group>";
+		};
+		760037AE2219C0AF00991ED7 /* Fly */ = {
+			isa = PBXGroup;
+			children = (
+				7600378D2219BB8600991ED7 /* FlyViewController.swift */,
+				760037AF2219C14200991ED7 /* FlyViewModel.swift */,
+			);
+			name = Fly;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7600378E2219BB8600991ED7 /* ViewController.swift in Sources */,
+				760037B02219C14200991ED7 /* FlyViewModel.swift in Sources */,
+				7600378E2219BB8600991ED7 /* FlyViewController.swift in Sources */,
 				760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */,
 				7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */,
 			);

@@ -10,20 +10,17 @@ import UIKit
 import CoreLocation
 
 // todo(kfcampbell):
-// 0. store highest value in private variable
-// 1. refactor to MVVM pattern
 // 2. create server
 // 3. create cosmosdb instance
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class FlyViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var currentAltitudeLabel: UILabel!
     @IBOutlet weak var currentVerticalAccuracyLabel: UILabel!
     @IBOutlet weak var highestAltitudeLabel: UILabel!
     @IBOutlet weak var highestVerticalAccuracyLabel: UILabel!
     
     var locationManager: CLLocationManager = CLLocationManager()
-    var altitudes: [CLLocationDistance] = []
-    var verticalAccuracies: [CLLocationAccuracy] = []
+    var flyViewModel = FlyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,21 +33,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        updateUI(location: locations[locations.count - 1])
-        updateState(newLocation: locations[locations.count - 1])
+        flyViewModel.updateState(location: locations[locations.count - 1])
+        updateUI()
     }
     
-    private func updateUI(location: CLLocation) {
-        currentAltitudeLabel.text = "altitude: \(location.altitude) meters"
-        currentVerticalAccuracyLabel.text = "vertical accuracy: \(location.verticalAccuracy) meters"
+    private func updateUI() {
+        currentAltitudeLabel.text = "altitude: \(flyViewModel.getCurrentAltitude() ?? 0.0) meters"
+        currentVerticalAccuracyLabel.text = "vertical accuracy: \(flyViewModel.getCurrentVerticalAccuracy() ?? 0.0) meters"
+        highestAltitudeLabel.text = "highest altitude: \(flyViewModel.getHighestAltitude() ?? 0.0) meters"
+        highestVerticalAccuracyLabel.text = "highest vertical accuracy: \(flyViewModel.getHighestVerticalAccuracy() ?? 0.0)"
     }
-    
-    private func updateState(newLocation: CLLocation) {
-        altitudes.append(newLocation.altitude)
-        verticalAccuracies.append(newLocation.verticalAccuracy)
-    }
-    
-    //    private func getHighestAltitude(): CLLocationDistance {
-    //
-    //    }
 }
