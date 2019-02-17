@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 // todo(kfcampbell):
-// 0. figure out how to make service calls bound to models
+// 0. figure out how to make service calls whose results are bound to model schema
 // 1. create UI/models for leaderboard. populate with fake data in view model.
 // 2. populate leaderboard with real data
 // 3. wire up "send high score" button press
@@ -53,12 +53,18 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func sendHighScore(_ sender: UIButton) {
         flyViewModel.displayName = (displayNameLabel.text == "") ? "default_display_name" : displayNameLabel.text ?? "default_display_name"
         let score = flyViewModel.getHighScore()
+        print(score)
         let alert = UIAlertController(title: "You've Made A Legal Agreement!", message: "Thanks for granting us consent to take your first born child. We'll be in touch with more details shortly!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default) { (action) in
             // noop
         }
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func resetLocalData(_ sender: UIButton) {
+        flyViewModel.reset()
+        updateUI()
     }
     
     private func updateUI() {

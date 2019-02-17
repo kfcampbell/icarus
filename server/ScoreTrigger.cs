@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 using System.Linq;
 
 // todo(kcampbell):
-// 0. figure out how function auth works (outcome: set up postman query for required auth for functions)
 // 3. input validation
 
 namespace Icarus

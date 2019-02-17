@@ -70,6 +70,13 @@ class FlyViewModel {
         locations.append(location)
     }
     
+    public func reset() {
+        locations = []
+        baselineLocation = CLLocation()
+        highestAltitude = nil
+        highestVerticalAccuracy = nil
+    }
+    
     private func updateHighestAltitude(altitude: CLLocationDistance) {
         if(highestAltitude == nil || highestAltitude! < altitude) {
             highestAltitude = altitude
