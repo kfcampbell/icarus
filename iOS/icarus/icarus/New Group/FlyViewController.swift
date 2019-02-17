@@ -10,8 +10,11 @@ import UIKit
 import CoreLocation
 
 // todo(kfcampbell):
-// 2. create server
-// 3. create cosmosdb instance
+// -1. track baseline altitude (not total altitude)
+// 0. figure out how to make service calls bound to models
+// 1. create UI/models for leaderboard. populate with fake data in view model.
+// 2. populate leaderboard with real data
+// 3. wire up "send high score" button press
 
 class FlyViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var currentAltitudeLabel: UILabel!
