@@ -107,8 +107,7 @@
 				7600378D2219BB8600991ED7 /* FlyViewController.swift */,
 				760037AF2219C14200991ED7 /* FlyViewModel.swift */,
 			);
-			name = Fly;
-			path = "New Group";
+			path = Fly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

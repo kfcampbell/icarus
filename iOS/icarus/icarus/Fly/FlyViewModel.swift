@@ -11,6 +11,7 @@ import CoreLocation
 
 class FlyViewModel {
     private var locations: [CLLocation] = []
+    private var baselineLocation: CLLocation = CLLocation()
     private var highestAltitude: CLLocationDistance? = nil
     private var highestVerticalAccuracy: CLLocationAccuracy? = nil
     
@@ -42,6 +43,9 @@ class FlyViewModel {
     }
     
     public func updateState(location: CLLocation) {
+        if(locations.count <= 0) {
+            baselineLocation = location
+        }
         updateHighestAltitude(altitude: location.altitude)
         updateHighestVerticalAccuracy(verticalAccuracy: location.verticalAccuracy)
         locations.append(location)
