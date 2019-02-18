@@ -9,11 +9,20 @@
 import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
-
+    
+    private var leaderboardViewModel = LeaderboardViewModel()
+    
+    @IBAction func refreshLeaderboard(_ sender: UIRefreshControl) {
+        leaderboardViewModel.getHighScores(successCallback: {
+            self.tableView.reloadData()
+            sender.endRefreshing()
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("inside leaderboard controller")
+        leaderboardViewModel.getHighScores(successCallback: self.tableView.reloadData)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,24 +33,23 @@ class LeaderboardTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return leaderboardViewModel.highScores.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardCell", for: indexPath)
 
-        // Configure the cell...
+        if(leaderboardViewModel.highScores.count > indexPath.row) {
+            let highScore = leaderboardViewModel.highScores[indexPath.row]
+            cell.textLabel?.text = "\(highScore.displayName): \(leaderboardViewModel.getComputedHeight(score: highScore))"
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

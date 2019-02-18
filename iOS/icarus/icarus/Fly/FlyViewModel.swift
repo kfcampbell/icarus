@@ -12,7 +12,6 @@ import Alamofire
 
 class FlyViewModel {
     public var displayName = "default_display_name"
-    public var highScores: [Score] = []
     private var locations: [CLLocation] = []
     private var baselineLocation: CLLocation = CLLocation()
     private var highestAltitude: CLLocationDistance? = nil
@@ -72,49 +71,6 @@ class FlyViewModel {
         }
         
         return true
-    }
-    
-    public func getHighScores() {
-
-        AF.request(Constants.icarusServerUrl, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
-            
-            
-//            if let json = response.result.value {
-//                //print("JSON: \(json)") // serialized json response
-//            }
-//
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                //print("Data: \(utf8Text)") // original server data as UTF8 string
-//            }
-            
-            if let results = response.result.value as? [[String: Any]] {
-                for result in results {
-                    print("result item: \(result)")
-                    
-                    if let latLng = result["latLng"] as? String, let phoneModel = result["phoneModel"] as? String, let timeStamp = result["timeStamp"] as? String, let baselineAltitude = result["baselineAltitude"] as? Double, let peakAltitude = result["peakAltitude"] as? Double, let baselineVerticalAccuracy = result["baselineVerticalAccuracy"] as? Double, let peakVerticalAccuracy = result["peakVerticalAccuracy"] as? Double, let scoreId = result["scoreId"] as? Int, let displayName = result["displayName"] as? String, let throwDuration = result["throwDuration"] as? Double {
-                        let highScore = Score()
-                        highScore.latLng = latLng
-                        highScore.phoneModel = phoneModel
-                        highScore.dateTime = timeStamp
-                        highScore.baselineAltitude = String(baselineAltitude)
-                        highScore.peakAltitude = String(peakAltitude)
-                        highScore.baselineVerticalAccuracy = String(baselineVerticalAccuracy)
-                        highScore.peakVerticalAccuracy = String(peakVerticalAccuracy)
-                        highScore.throwDuration = String(throwDuration)
-                        highScore.scoreId = String(scoreId)
-                        highScore.displayName = displayName
-                        
-                        self.highScores.append(highScore)
-                    }
-                }
-                
-            } else {
-                print("serialization failed")
-            }
-        }
     }
     
     public func getCurrentAltitude() -> CLLocationDistance? {

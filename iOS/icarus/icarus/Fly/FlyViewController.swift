@@ -64,7 +64,6 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func resetLocalData(_ sender: UIButton) {
-        flyViewModel.getHighScores()
         flyViewModel.reset()
         updateUI()
     }

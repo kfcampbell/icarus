@@ -20,6 +20,8 @@
 		760037B82219E5F200991ED7 /* DeviceUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B72219E5F200991ED7 /* DeviceUtilities.swift */; };
 		760037BB221B273700991ED7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037BA221B273700991ED7 /* Constants.swift */; };
 		760037BE221B3E7600991ED7 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037BD221B3E7600991ED7 /* LeaderboardTableViewController.swift */; };
+		760037C0221B404600991ED7 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037BF221B404600991ED7 /* LeaderboardViewModel.swift */; };
+		760037C2221B437600991ED7 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037C1221B437600991ED7 /* LeaderboardTableViewCell.swift */; };
 		9A267490C024300AF27676E0 /* Pods_icarusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE1E55E529EC87D1400EDBB /* Pods_icarusTests.framework */; };
 		E21E962EC002BA7F620DCDBD /* Pods_icarus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7B55F31D0CF908DF2D74A9 /* Pods_icarus.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		760037B72219E5F200991ED7 /* DeviceUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtilities.swift; sourceTree = "<group>"; };
 		760037BA221B273700991ED7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		760037BD221B3E7600991ED7 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		760037BF221B404600991ED7 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
+		760037C1221B437600991ED7 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		BE7B55F31D0CF908DF2D74A9 /* Pods_icarus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icarus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE1E55E529EC87D1400EDBB /* Pods_icarusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icarusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEE573623D8FF78ABD2F2D5 /* Pods-icarusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icarusTests.debug.xcconfig"; path = "Target Support Files/Pods-icarusTests/Pods-icarusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				760037BD221B3E7600991ED7 /* LeaderboardTableViewController.swift */,
+				760037BF221B404600991ED7 /* LeaderboardViewModel.swift */,
+				760037C1221B437600991ED7 /* LeaderboardTableViewCell.swift */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -364,7 +370,9 @@
 			files = (
 				760037B02219C14200991ED7 /* FlyViewModel.swift in Sources */,
 				760037B62219E4B300991ED7 /* ScoreUtilities.swift in Sources */,
+				760037C0221B404600991ED7 /* LeaderboardViewModel.swift in Sources */,
 				760037B82219E5F200991ED7 /* DeviceUtilities.swift in Sources */,
+				760037C2221B437600991ED7 /* LeaderboardTableViewCell.swift in Sources */,
 				7600378E2219BB8600991ED7 /* FlyViewController.swift in Sources */,
 				760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */,
 				760037BE221B3E7600991ED7 /* LeaderboardTableViewController.swift in Sources */,
