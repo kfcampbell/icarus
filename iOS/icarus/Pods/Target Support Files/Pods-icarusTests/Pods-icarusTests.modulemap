@@ -1,0 +1,6 @@
+framework module Pods_icarusTests {
+  umbrella header "Pods-icarusTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

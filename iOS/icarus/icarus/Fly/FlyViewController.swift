@@ -52,8 +52,9 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func sendHighScore(_ sender: UIButton) {
         flyViewModel.displayName = (displayNameLabel.text == "") ? "default_display_name" : displayNameLabel.text ?? "default_display_name"
-        let score = flyViewModel.getHighScore()
+        let score = flyViewModel.getUserHighScore()
         print(score)
+        let _ = flyViewModel.sendHighScore(score: score)
         let alert = UIAlertController(title: "You've Made A Legal Agreement!", message: "Thanks for granting us consent to take your first born child. We'll be in touch with more details shortly!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Okay", style: .default) { (action) in
             // noop
@@ -63,6 +64,7 @@ class FlyViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func resetLocalData(_ sender: UIButton) {
+        flyViewModel.getHighScores()
         flyViewModel.reset()
         updateUI()
     }

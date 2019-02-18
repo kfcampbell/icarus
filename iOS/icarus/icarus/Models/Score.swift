@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Score {
-    public var latLon = ""
+class Score: Codable {
+    public var latLng = ""
     public var displayName = ""
     public var baselineAltitude = ""
     public var peakAltitude = ""
@@ -18,4 +18,5 @@ class Score {
     public var dateTime = ""
     public var phoneModel = ""
     public var throwDuration = ""
+    public var scoreId = ""
 }

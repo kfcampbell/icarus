@@ -18,6 +18,9 @@
 		760037B32219E3CA00991ED7 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B22219E3CA00991ED7 /* Score.swift */; };
 		760037B62219E4B300991ED7 /* ScoreUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B52219E4B300991ED7 /* ScoreUtilities.swift */; };
 		760037B82219E5F200991ED7 /* DeviceUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037B72219E5F200991ED7 /* DeviceUtilities.swift */; };
+		760037BB221B273700991ED7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760037BA221B273700991ED7 /* Constants.swift */; };
+		9A267490C024300AF27676E0 /* Pods_icarusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE1E55E529EC87D1400EDBB /* Pods_icarusTests.framework */; };
+		E21E962EC002BA7F620DCDBD /* Pods_icarus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7B55F31D0CF908DF2D74A9 /* Pods_icarus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54FDAA1442C590A67F60FFA8 /* Pods-icarusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icarusTests.release.xcconfig"; path = "Target Support Files/Pods-icarusTests/Pods-icarusTests.release.xcconfig"; sourceTree = "<group>"; };
+		63BE3DB5CA7CD5AD4E0C7F95 /* Pods-icarus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icarus.release.xcconfig"; path = "Target Support Files/Pods-icarus/Pods-icarus.release.xcconfig"; sourceTree = "<group>"; };
+		69F94137A3977217E0959BD6 /* Pods-icarus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icarus.debug.xcconfig"; path = "Target Support Files/Pods-icarus/Pods-icarus.debug.xcconfig"; sourceTree = "<group>"; };
 		760037882219BB8600991ED7 /* icarus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icarus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7600378B2219BB8600991ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7600378D2219BB8600991ED7 /* FlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +52,10 @@
 		760037B22219E3CA00991ED7 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		760037B52219E4B300991ED7 /* ScoreUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreUtilities.swift; sourceTree = "<group>"; };
 		760037B72219E5F200991ED7 /* DeviceUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtilities.swift; sourceTree = "<group>"; };
+		760037BA221B273700991ED7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE7B55F31D0CF908DF2D74A9 /* Pods_icarus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icarus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE1E55E529EC87D1400EDBB /* Pods_icarusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icarusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEE573623D8FF78ABD2F2D5 /* Pods-icarusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icarusTests.debug.xcconfig"; path = "Target Support Files/Pods-icarusTests/Pods-icarusTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21E962EC002BA7F620DCDBD /* Pods_icarus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +71,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A267490C024300AF27676E0 /* Pods_icarusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072C61D6B3DFDDA34CD3A1D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE7B55F31D0CF908DF2D74A9 /* Pods_icarus.framework */,
+				FCE1E55E529EC87D1400EDBB /* Pods_icarusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7600377F2219BB8600991ED7 = {
 			isa = PBXGroup;
 			children = (
 				7600378A2219BB8600991ED7 /* icarus */,
 				760037A22219BB8600991ED7 /* icarusTests */,
 				760037892219BB8600991ED7 /* Products */,
+				BE8CBEBEA9A391B27B50276A /* Pods */,
+				072C61D6B3DFDDA34CD3A1D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +110,7 @@
 		7600378A2219BB8600991ED7 /* icarus */ = {
 			isa = PBXGroup;
 			children = (
+				760037B9221B272C00991ED7 /* Assets */,
 				760037B42219E4A200991ED7 /* Utilities */,
 				760037B12219E3B000991ED7 /* Models */,
 				760037AE2219C0AF00991ED7 /* Fly */,
@@ -135,6 +159,25 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		760037B9221B272C00991ED7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				760037BA221B273700991ED7 /* Constants.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BE8CBEBEA9A391B27B50276A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69F94137A3977217E0959BD6 /* Pods-icarus.debug.xcconfig */,
+				63BE3DB5CA7CD5AD4E0C7F95 /* Pods-icarus.release.xcconfig */,
+				FDEE573623D8FF78ABD2F2D5 /* Pods-icarusTests.debug.xcconfig */,
+				54FDAA1442C590A67F60FFA8 /* Pods-icarusTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 760037A82219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarus" */;
 			buildPhases = (
+				925E1D4B08EB77A850F07DE8 /* [CP] Check Pods Manifest.lock */,
 				760037842219BB8600991ED7 /* Sources */,
 				760037852219BB8600991ED7 /* Frameworks */,
 				760037862219BB8600991ED7 /* Resources */,
+				B08093151B81F58778E56095 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 760037AB2219BB8600991ED7 /* Build configuration list for PBXNativeTarget "icarusTests" */;
 			buildPhases = (
+				FA49CF1CCE5C53A9FFF39241 /* [CP] Check Pods Manifest.lock */,
 				7600379B2219BB8600991ED7 /* Sources */,
 				7600379C2219BB8600991ED7 /* Frameworks */,
 				7600379D2219BB8600991ED7 /* Resources */,
@@ -231,6 +277,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		925E1D4B08EB77A850F07DE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-icarus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B08093151B81F58778E56095 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-icarus/Pods-icarus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-icarus/Pods-icarus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA49CF1CCE5C53A9FFF39241 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-icarusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		760037842219BB8600991ED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,6 +358,7 @@
 				760037942219BB8600991ED7 /* icarus.xcdatamodeld in Sources */,
 				7600378C2219BB8600991ED7 /* AppDelegate.swift in Sources */,
 				760037B32219E3CA00991ED7 /* Score.swift in Sources */,
+				760037BB221B273700991ED7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +518,7 @@
 		};
 		760037A92219BB8600991ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F94137A3977217E0959BD6 /* Pods-icarus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +537,7 @@
 		};
 		760037AA2219BB8600991ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BE3DB5CA7CD5AD4E0C7F95 /* Pods-icarus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +556,7 @@
 		};
 		760037AC2219BB8600991ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEE573623D8FF78ABD2F2D5 /* Pods-icarusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -459,6 +578,7 @@
 		};
 		760037AD2219BB8600991ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FDAA1442C590A67F60FFA8 /* Pods-icarusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

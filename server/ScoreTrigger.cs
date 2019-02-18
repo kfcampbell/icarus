@@ -21,9 +21,9 @@ namespace Icarus
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogInformation($"request body: {requestBody}");
             Score score = JsonConvert.DeserializeObject<Score>(requestBody);
 
             if (score != null)
