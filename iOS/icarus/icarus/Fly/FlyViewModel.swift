@@ -13,17 +13,18 @@ import Alamofire
 class FlyViewModel {
     public var displayName = "default_display_name"
     private var locations: [CLLocation] = []
-    private var baselineLocation: CLLocation = CLLocation()
+    private var baselineAltitude = 0.0
+    private var baselineSet = false
     private var highestAltitude: CLLocationDistance? = nil
     private var highestVerticalAccuracy: CLLocationAccuracy? = nil
     
     public func getUserHighScore() -> Score {
         let score = Score()
-        score.baselineAltitude = baselineLocation.altitude.description
-        score.baselineVerticalAccuracy = baselineLocation.altitude.description
+        score.baselineAltitude = baselineAltitude.description
+        score.baselineVerticalAccuracy = "\(0.0)"
         score.dateTime = ScoreUtilities.getFormattedDate()
         score.displayName = displayName
-        score.latLng = ScoreUtilities.getFormattedLatLon(location: baselineLocation)
+        score.latLng = ScoreUtilities.getFormattedLatLon(location: locations[0])
         
         if let peakAltitude = highestAltitude {
             score.peakAltitude = String(peakAltitude)
@@ -74,14 +75,14 @@ class FlyViewModel {
     }
     
     public func getCurrentAltitude() -> CLLocationDistance? {
-        if(locations.count > 0) {
-            return locations[locations.count - 1].altitude - baselineLocation.altitude
+        if(locations.count > 5) {
+            return locations[locations.count - 1].altitude - baselineAltitude
         }
         return nil
     }
     
     public func getCurrentVerticalAccuracy() -> CLLocationAccuracy? {
-        if(locations.count > 0) {
+        if(locations.count > 5) {
             return locations[locations.count - 1].verticalAccuracy
         }
         return nil
@@ -89,7 +90,7 @@ class FlyViewModel {
     
     public func getHighestAltitude() -> CLLocationDistance? {
         if let highest = highestAltitude {
-            return highest - baselineLocation.altitude
+            return highest - baselineAltitude
         }
         return nil
     }
@@ -101,8 +102,19 @@ class FlyViewModel {
     }
     
     public func updateState(location: CLLocation) {
-        if(locations.count <= 0) {
-            baselineLocation = location
+        if(locations.count <= 5) {
+            locations.append(location)
+            return
+        } else if !baselineSet {
+            var sum = 0.0
+            for (index, location) in locations.enumerated() {
+                if(index > 4) {
+                    break
+                }
+                sum += location.altitude
+            }
+            baselineAltitude = sum / 5
+            baselineSet = true
         }
         updateHighestAltitude(altitude: location.altitude)
         updateHighestVerticalAccuracy(verticalAccuracy: location.verticalAccuracy)
@@ -111,7 +123,8 @@ class FlyViewModel {
     
     public func reset() {
         locations = []
-        baselineLocation = CLLocation()
+        baselineAltitude = 0.0
+        baselineSet = false
         highestAltitude = nil
         highestVerticalAccuracy = nil
     }

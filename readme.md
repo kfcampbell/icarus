@@ -4,7 +4,8 @@ Track your phone's altitude while you throw it skyward. Impress your friends wit
 
 ## todo
 
-- follow todos in individual projects
+- use accelerometer data to determine height more accurately
+- make it pretty
 
 ## notes/miscellaneous/scratch space
 
