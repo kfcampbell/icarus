@@ -19,49 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Altitude: 16.37548 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-BN-4ZU">
-                                <rect key="frame" x="16" y="175" width="343" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Vertical Accuracy: 10.5 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vto-Ub-1Wt">
-                                <rect key="frame" x="16" y="247" width="343" height="37"/>
+                                <rect key="frame" x="16" y="149" width="343" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Altitude: 18.39825 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-03-VkG">
-                                <rect key="frame" x="16" y="292" width="343" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highest Vertical Accuracy: 11.8 meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7z-cC-SVP">
-                                <rect key="frame" x="16" y="346" width="343" height="48"/>
+                                <rect key="frame" x="16" y="203" width="343" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tracking On/Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKf-TQ-mDI">
-                                <rect key="frame" x="16" y="428" width="177" height="41"/>
+                                <rect key="frame" x="16" y="268" width="177" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-yy-djY">
-                                <rect key="frame" x="201" y="433" width="49" height="31"/>
+                                <rect key="frame" x="200" y="273" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="trackingSwitchFlipped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xas-4n-lRr"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnM-uH-LaQ">
-                                <rect key="frame" x="75" y="490" width="200" height="71"/>
+                                <rect key="frame" x="75" y="344" width="200" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.33333333333333331" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
@@ -73,14 +59,14 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter display name here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="enL-US-y6G">
-                                <rect key="frame" x="16" y="85" width="271" height="31"/>
+                                <rect key="frame" x="52" y="86" width="271" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-DS-lQw">
-                                <rect key="frame" x="103" y="586" width="144" height="51"/>
+                                <rect key="frame" x="103" y="436" width="144" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Reset Local Data"/>
@@ -95,10 +81,8 @@
                     <tabBarItem key="tabBarItem" title="Fly" id="Cin-QG-sAT"/>
                     <connections>
                         <outlet property="currentAltitudeLabel" destination="PEX-BN-4ZU" id="ttU-Le-Am2"/>
-                        <outlet property="currentVerticalAccuracyLabel" destination="vto-Ub-1Wt" id="zA8-Bb-ez3"/>
                         <outlet property="displayNameLabel" destination="enL-US-y6G" id="dui-hx-Sc0"/>
                         <outlet property="highestAltitudeLabel" destination="9uS-03-VkG" id="h6p-jz-J4B"/>
-                        <outlet property="highestVerticalAccuracyLabel" destination="g7z-cC-SVP" id="V0P-Hv-e7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -129,6 +113,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Leaderboard" id="56q-Cg-dha"/>
+                    <navigationItem key="navigationItem" id="MdP-eu-JWT"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="vyu-eq-E84">
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
@@ -146,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZu-cs-Ggo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="-510.49475262368821"/>
+            <point key="canvasLocation" x="1020" y="-573"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QAh-L8-gf1">
@@ -159,12 +144,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mk7-3y-A0o"/>
-                        <segue destination="aL8-WW-3tv" kind="relationship" relationship="viewControllers" id="phc-Wm-w7P"/>
+                        <segue destination="4or-HX-O7S" kind="relationship" relationship="viewControllers" id="Dva-22-ooi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyL-rc-Zhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1042" y="-930"/>
+        </scene>
+        <!--Global High Scores-->
+        <scene sceneID="Yhi-WX-kFB">
+            <objects>
+                <navigationController title="Global High Scores" id="4or-HX-O7S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="G2K-Jb-znY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KfZ-Zp-jh5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aL8-WW-3tv" kind="relationship" relationship="rootViewController" id="uNI-4G-XEI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwk-9Z-gj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-573"/>
         </scene>
     </scenes>
 </document>

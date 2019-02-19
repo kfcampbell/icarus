@@ -45,7 +45,7 @@ class LeaderboardTableViewController: UITableViewController {
 
         if(leaderboardViewModel.highScores.count > indexPath.row) {
             let highScore = leaderboardViewModel.highScores[indexPath.row]
-            cell.textLabel?.text = "\(highScore.displayName): \(leaderboardViewModel.getComputedHeight(score: highScore))"
+            cell.textLabel?.text = "\(highScore.displayName) - (\(highScore.phoneModel)) \((leaderboardViewModel.getComputedHeight(score: highScore)).truncate(places: 2))m"
         }
 
         return cell
