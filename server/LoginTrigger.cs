@@ -20,8 +20,6 @@ namespace Icarus
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("login trigger function processed a request.");
-
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             try
             {
@@ -37,7 +35,7 @@ namespace Icarus
                 Console.WriteLine(JsonConvert.SerializeObject(loginTask));
 
 
-                return (ActionResult)new OkObjectResult("Login succeeded");
+                return (ActionResult)new OkObjectResult(JsonConvert.SerializeObject(loginTask));
             }
             catch (Exception ex)
             {

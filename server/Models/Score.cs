@@ -14,6 +14,15 @@ namespace Icarus
         }
     }
 
+    public class HighScoreFromClient
+    {
+        public string PlayFabId { get; set; }
+
+        // since playfab statistics can only store ints, we store meters multiplied by 10
+        // e.g. 545 in statistics corresponds to 5.45 meters tossed
+        public int MetersMultipliedByTen { get; set; }
+    }
+
     public class Score
     {
         public int ScoreId { get; set; }

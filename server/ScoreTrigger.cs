@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,10 @@ using Newtonsoft.Json;
 using System.Linq;
 using PlayFab;
 using PlayFab.ClientModels;
+using PlayFab.ServerModels;
 
 // todo(kcampbell):
 // 0. create method to set highest_toss user statistic
-// 1. create method to get all highest_toss statistics (regardless of user)
 // 2. create models on clientside
 // 3. update clientside requests
 // 4. test test test test
@@ -33,31 +34,38 @@ namespace Icarus
             //Score score = JsonConvert.DeserializeObject<Score>(requestBody);
 
             // post request. add to leaderboard
-            if (requestBody != null)
+            PlayFab.PlayFabSettings.DeveloperSecretKey = Environment.GetEnvironmentVariable("PLAYFAB_DEVELOPER_SECRET_KEY");
+            PlayFab.PlayFabSettings.TitleId = "6D64";
+            if (requestBody != null && requestBody != string.Empty)
             {
-                /* using (var db = new ScoreContext())
-                {
-                    db.Scores.Add(score);
-
-                    var count = await db.SaveChangesAsync();
-                    log.LogInformation($"{count} records written to DB");
-                }
-                return (ActionResult)new OkObjectResult("Successfully added high score to database");*/
+                var sendHighScore = await PlayFab.PlayFabServerAPI.UpdatePlayerStatisticsAsync(
+                    new PlayFab.ServerModels.UpdatePlayerStatisticsRequest
+                    {
+                        PlayFabId = "", // comes from login
+                        Statistics = new List<PlayFab.ServerModels.StatisticUpdate>()
+                        {
+                            new PlayFab.ServerModels.StatisticUpdate()
+                            {
+                                StatisticName = "highest_toss",
+                                Value = 525
+                            }
+                        }
+                    }
+                );
+                return (ActionResult)new OkObjectResult($"{JsonConvert.SerializeObject(sendHighScore)}");
             }
             // get request. get all scores
             else
             {
-                /* using (var db = new ScoreContext())
-                {
-                    var allScores = db.Scores.OrderByDescending(s => (s.PeakAltitude - s.BaselineAltitude)).ToList();
-                    return (ActionResult)new OkObjectResult(allScores);
-                }*/
-                var leaderboard = PlayFab.PlayFabClientAPI.GetLeaderboardAsync(
-                    new GetLeaderboardRequest
+                var leaderboard = await PlayFab.PlayFabServerAPI.GetLeaderboardAsync(
+                    new PlayFab.ServerModels.GetLeaderboardRequest
                     {
-
+                        StartPosition = 0,
+                        MaxResultsCount = 100,
+                        StatisticName = "highest_toss",
                     }
                 );
+                return (ActionResult) new OkObjectResult(JsonConvert.SerializeObject(leaderboard));
             }
         }
     }
